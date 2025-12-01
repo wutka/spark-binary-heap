@@ -31,7 +31,7 @@ package Simple_Binary_Heap is
    procedure Insert (Heap : in out Binary_Heap;
       New_Elem : Element_Type)
       with
-         Pre => Length (Heap) < Heap.Capacity,
+         Pre => Has_Capacity (Heap),
          Post => Length (Heap) = Length (Heap'Old) + 1;
 
 private

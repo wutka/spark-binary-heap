@@ -35,7 +35,7 @@ package Binary_Heap is
       New_Elem : Element_Type;
       New_Weight : Weight_Type)
       with
-         Pre => Length (Heap) < Heap.Capacity,
+         Pre => Has_Capacity (Heap),
          Post => Length (Heap) = Length (Heap'Old) + 1;
 
 private
